@@ -26,23 +26,21 @@ export default class Header extends Component {
                <hr/>
                <ul className="social">
                   {
-                    resumeData.socialLinks && resumeData.socialLinks.map(item =>{
-                      return(
-                              <li key={item.name}>
-                                <a href={item.url} target="_blank"><i className={item.className}></i></a>
-                              </li>
-                            )
-                          }
-                    )
+                    resumeData.socialLinks && resumeData.socialLinks.map(item => {
+                      return (
+                        <li key={item.name}>
+                          <a href={item.url} target="_blank"><i className={item.className}></i></a>
+                        </li>
+                      )
+                    })
                   }
                </ul>
             </div>
          </div>
-
+         <img className="imgBottom" src={'images/desert-bot.gif'}></img>
          <p className="scrolldown">
             <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
          </p>
-
       </header>
       </React.Fragment>
     );
