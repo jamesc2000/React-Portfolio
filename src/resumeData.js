@@ -1,62 +1,54 @@
+const social = {
+  "linkedin": "https://www.linkedin.com/in/cruz-james/",
+  "github": "https://github.com/jamesc2000",
+  "website": ""
+}
+
 let resumeData = {
-    "imagebaseurl":"https://rbhatia46.github.io/",
-    "name": "Rahul Bhatia",
-    "role": "Frontend Developer and Data Scientist",
-    "linkedinId":"Your LinkedIn Id",
-    "skypeid": "Your skypeid",
+    "name": "James Laurence Cruz",
+    "role": "Frontend Developer",
+    "linkedinId": social.linkedin,
     "roleDescription": "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
     "socialLinks":[
         {
           "name":"linkedin",
-          "url":"https://www.linkedin.com/in/rahul-bhatia-67ba08121/",
+          "url": social.linkedin,
           "className":"fa fa-linkedin"
         },
         {
           "name":"github",
-          "url":"http://github.com/rbhatia46",
+          "url": social.github,
           "className":"fa fa-github"
         },
-        {
-          "name":"skype",
-          "url":"http://twitter.com/rbhatia46",
-          "className":"fa fa-twitter"
-        }
       ],
-    "aboutme":"I am currently a pre-final year student at The LNM Institute of Information Technology and pursuing my B.Tech from here. I am a self taught Full Stack Web Developer, currently diving deeper into Machine Learning. I believe that to be successful in life, one needs to be obsessive with their dreams and keep working towards them.",
-    "address":"India",
-    "website":"https://rbhatia46.github.io",
+    "aboutme":"I am currently a student of Pamantasan ng Lungsod ng Maynila (PLM), and aspiring to be a software developer in the future. As of now, I currently do freelance work, and work on my personal projects to further enhance my skills as a developer.",
+    "address":"Philippines",
+    "website": social.website,
     "education":[
       {
-        "UniversityName":"The LNM Insitute of Information Technology",
-        "specialization":"Some specialization",
-        "MonthOfPassing":"Aug",
-        "YearOfPassing":"2020",
-        "Achievements":"Some Achievements"
+        "UniversityName":"Pamantasan ng Lungsod ng Maynila",
+        "UniversityAlt": "(University of the City of Manila)",
+        "specialization":"Bachelor of Science Major in Computer Engineering",
+        "MonthOfPassing":"May",
+        "YearOfPassing":"2022",
       },
       {
-        "UniversityName":"Some University",
-        "specialization":"Some specialization",
-        "MonthOfPassing":"Jan",
-        "YearOfPassing":"2018",
-        "Achievements":"Some Achievements"
+        "UniversityName":"Lyceum of the Philippines University - Cavite",
+        "specialization":"Academic Track - STEM",
+        "MonthOfPassing":"May",
+        "YearOfPassing":"2019",
+        "Achievements":"With Honors"
       }
     ],
-    "work":[
-      {
-        "CompanyName":"Some Company",
-        "specialization":"Some specialization",
-        "MonthOfLeaving":"Jan",
-        "YearOfLeaving":"2018",
-        "Achievements":"Some Achievements"
-      },
-      {
-        "CompanyName":"Some Company",
-        "specialization":"Some specialization",
-        "MonthOfLeaving":"Jan",
-        "YearOfLeaving":"2018",
-        "Achievements":"Some Achievements"
-      }
-    ],
+    // "work":[
+    //   {
+    //     "CompanyName":"Some Company",
+    //     "specialization":"Some specialization",
+    //     "MonthOfLeaving":"Jan",
+    //     "YearOfLeaving":"2018",
+    //     "Achievements":"Some Achievements"
+    //   },
+    // ],
     "skillsDescription":"Your skills here",
     "skills":[
       {

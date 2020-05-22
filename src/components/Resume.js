@@ -18,6 +18,7 @@ export default  class Resume extends Component {
                     <div className="row item">
                        <div className="twelve columns">
                           <h3>{item.UniversityName}</h3>
+                          <h4>{item.UniversityAlt}</h4>
                           <p className="info">
                           {item.specialization}
                           <span>&bull;</span> <em className="date">{item.MonthOfPassing} {item.YearOfPassing}</em></p>
