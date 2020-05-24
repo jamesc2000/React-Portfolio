@@ -5,6 +5,8 @@ export default class Header extends Component {
     return (
       <React.Fragment>
       
+      <div className="parallax"></div>
+      <div className="fixed"></div>
       <header id="home">
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
@@ -28,7 +30,7 @@ export default class Header extends Component {
                   {
                     resumeData.socialLinks && resumeData.socialLinks.map(item => {
                       return (
-                        <li key={item.name}>
+                        <li>
                           <a href={item.url} target="_blank"><i className={item.className}></i></a>
                         </li>
                       )
@@ -37,7 +39,6 @@ export default class Header extends Component {
                </ul>
             </div>
          </div>
-         <img className="imgBottom" src={'images/desert-bot.gif'}></img>
          <p className="scrolldown">
             <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
          </p>

@@ -22,7 +22,13 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+:root {
+   --speed: 128ms;
+}
+
+body { 
+   background: #0f0f0f; 
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -33,20 +39,35 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/desert-top.gif) no-repeat top center;
-   background-attachment: fixed;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
+   z-index: 2;
 }
 
-.imgBottom {
-   z-index: 99;
-   width: 100%;
+.fixed {
    position: absolute;
+   bottom: -1px;
    left: 0;
-   bottom: 0;
+   height: 100vh;
+   width: 100%;
+   background: url('../images/desert-bot.gif') no-repeat bottom center;
+   background-attachment: scroll;
+   background-size: cover !important;
+   -webkit-background-size: cover !important;
+   z-index: 1;
+}
+
+.parallax {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 100%;
+   background: url('../images/desert-top.gif') no-repeat top center;
+   background-attachment: fixed;
+   background-size: cover !important;
+   -webkit-background-size: cover !important;
+   z-index: -999;
 }
 
 /* vertically center banner section */
@@ -61,13 +82,13 @@ header .banner {
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
 }
 
 header .banner-text { width: 100%; }
 header .banner-text h1 {
-   font: 90px/1.1em 'opensans-bold', sans-serif;
+   font: 60px/1.1em 'opensans-bold', sans-serif !important;
    color: #fff;
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
@@ -121,10 +142,10 @@ header .scrolldown a {
    color: #fff;
    border-radius: 100%;
 
-   -webkit-transition: all .3s ease-in-out;
-   -moz-transition: all .3s ease-in-out;
-   -o-transition: all .3s ease-in-out;
-   transition: all .3s ease-in-out;
+   -webkit-transition: all var(--speed) ease-in-out;
+   -moz-transition: all var(--speed) ease-in-out;
+   -o-transition: all var(--speed) ease-in-out;
+   transition: all var(--speed) ease-in-out;
 }
 header .scrolldown a:hover { color: #F06000; }
 
@@ -180,15 +201,15 @@ ul#nav li a {
    text-align: left;
    color: #fff;
 
-	-webkit-transition: color .2s ease-in-out;
-	-moz-transition: color .2s ease-in-out;
-	-o-transition: color .2s ease-in-out;
-	-ms-transition: color .2s ease-in-out;
-	transition: color .2s ease-in-out;
+	-webkit-transition: color var(--speed) ease-in-out;
+	-moz-transition: color var(--speed) ease-in-out;
+	-o-transition: color var(--speed) ease-in-out;
+	-ms-transition: color var(--speed) ease-in-out;
+	transition: color var(--speed) ease-in-out;
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #F06000; }
+ul#nav li.current a, ul#nav li:hover a { color: #F06000; }
 
 
 /* ------------------------------------------------------------------ */
@@ -440,11 +461,11 @@ ul#nav li.current a { color: #F06000; }
    overflow: hidden;
    position: relative;
 
-   -webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+   -webkit-transition: all var(--speed) ease-in-out;
+	-moz-transition: all var(--speed) ease-in-out;
+	-o-transition: all var(--speed) ease-in-out;
+	-ms-transition: all var(--speed) ease-in-out;
+	transition: all var(--speed) ease-in-out;
 }
 .portfolio-item .item-wrap a {
    display: block;
@@ -463,10 +484,10 @@ ul#nav li.current a { color: #F06000; }
 	-moz-opacity: 0;
 	filter:alpha(opacity=0);
 
-   -webkit-transition: opacity 0.3s ease-in-out;
-	-moz-transition: opacity 0.3s ease-in-out;
-	-o-transition: opacity 0.3s ease-in-out;
-	transition: opacity 0.3s ease-in-out;
+   -webkit-transition: opacity var(--speed) ease-in-out;
+	-moz-transition: opacity var(--speed) ease-in-out;
+	-o-transition: opacity var(--speed) ease-in-out;
+	transition: opacity var(--speed) ease-in-out;
 
    background: url(../images/overlay-bg.png) repeat;
 }
@@ -483,10 +504,10 @@ ul#nav li.current a { color: #F06000; }
 	-moz-opacity: 0;
 	filter:alpha(opacity=0);
 
-   -webkit-transition: opacity 0.3s ease-in-out;
-	-moz-transition: opacity 0.3s ease-in-out;
-	-o-transition: opacity 0.3s ease-in-out;
-	transition: opacity 0.3s ease-in-out;
+   -webkit-transition: opacity var(--speed) ease-in-out;
+	-moz-transition: opacity var(--speed) ease-in-out;
+	-o-transition: opacity var(--speed) ease-in-out;
+	transition: opacity var(--speed) ease-in-out;
 
    position: absolute;
    top: 50%;
@@ -571,11 +592,11 @@ ul#nav li.current a { color: #F06000; }
 /* content at start */
 .mfp-fade.mfp-wrap .mfp-content .popup-modal {
    opacity: 0;
-   -webkit-transition: all 200ms ease-in-out;
-	-moz-transition: all 200ms ease-in-out;
-	-o-transition: all 200ms ease-in-out;
-	-ms-transition: all 200ms ease-in-out;
-   transition: all 200ms ease-in-out;
+   -webkit-transition: all var(--speed) ease-in-out;
+	-moz-transition: all var(--speed) ease-in-out;
+	-o-transition: all var(--speed) ease-in-out;
+	-ms-transition: all var(--speed) ease-in-out;
+   transition: all var(--speed) ease-in-out;
 }
 /* content fadein */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content .popup-modal {
@@ -1000,11 +1021,11 @@ footer .social-links li:first-child { margin-left: 0; }
 	height: 60px;
 	background-color: #525252;
 
-	-webkit-transition: all 0.2s ease-in-out;
-   -moz-transition: all 0.2s ease-in-out;
-   -o-transition: all 0.2s ease-in-out;
-   -ms-transition: all 0.2s ease-in-out;
-   transition: all 0.2s ease-in-out;
+	-webkit-transition: all var(--speed) ease-in-out;
+   -moz-transition: all var(--speed) ease-in-out;
+   -o-transition: all var(--speed) ease-in-out;
+   -ms-transition: all var(--speed) ease-in-out;
+   transition: all var(--speed) ease-in-out;
 
    color: #fff;
    font-size: 21px;
