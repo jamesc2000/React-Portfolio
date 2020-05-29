@@ -7,7 +7,7 @@ const social = {
 let resumeData = {
     "name": "James Laurence Cruz",
     "role": "Frontend Developer",
-    "botImgUrl": "images/desert-bot.gif",
+    "profilepic": "React-Portfolio/images/profilepic.jpg",
     "linkedinId": "https://www.linkedin.com/in/cruz-james/",
     "roleDescription": "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
     "socialLinks":[
@@ -66,34 +66,24 @@ let resumeData = {
       {
         "name":"project1",
         "description":"mobileapp",
-        "imgurl":"images/portfolio/phone.jpg"
+        "imgurl":"React-Portfolio/images/portfolio/phone.jpg"
       },
       {
         "name":"project2",
         "description":"mobileapp",
-        "imgurl":"images/portfolio/project.jpg"
+        "imgurl":"React-Portfolio/images/portfolio/project.jpg"
       },
       {
         "name":"project3",
         "description":"mobileapp",  
-        "imgurl":"images/portfolio/project2.png"
+        "imgurl":"React-Portfolio/images/portfolio/project2.png"
       },
       {
         "name":"project4",
         "description":"mobileapp",
-        "imgurl":"images/portfolio/phone.jpg"
+        "imgurl":"React-Portfolio/images/portfolio/phone.jpg"
       }
     ],
-    "testimonials":[
-      {
-        "description":"This is a sample testimonial",
-        "name":"Some technical guy"
-      },
-      {
-        "description":"This is a sample testimonial",
-        "name":"Some technical guy"
-      }
-    ]
   }
   
   export default resumeData
