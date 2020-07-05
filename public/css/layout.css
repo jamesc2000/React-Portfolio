@@ -529,6 +529,11 @@ ul#nav li.current a, ul#nav li:hover a { color: #F06000; }
    margin-bottom: 0;
 }
 
+#buttons
+{
+   margin-top: 8px;
+}
+
 /* on hover */
 .portfolio-item:hover .overlay {
 	opacity: 1;
