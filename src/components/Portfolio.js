@@ -9,10 +9,11 @@ export default class Porfolio extends Component {
         <div className="twelve columns collapsed">
           <h1>Check Out Some of My Works.</h1>
           <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-            <PortfolioItem resumeData={resumeData}/>
-            <PortfolioItem resumeData={resumeData}/>
-            <PortfolioItem resumeData={resumeData}/>
-            <PortfolioItem resumeData={resumeData}/>
+            {
+              resumeData.portfolio.map(i => (
+                <PortfolioItem key={i.name} name={i.name} desc={i.desc} src={i.imgurl}/>
+              ))
+            }
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 const social = {
-  "linkedin": "https://www.linkedin.com/in/cruz-james/",
-  "github": "https://github.com/jamesc2000",
-  "website": ""
+    "linkedin": "https://www.linkedin.com/in/cruz-james/",
+    "github": "https://github.com/jamesc2000",
+    "website": ""
 }
 
 let resumeData = {
@@ -65,22 +65,22 @@ let resumeData = {
     "portfolio":[
       {
         "name":"project1",
-        "description":"mobileapp",
-        "imgurl":"React-Portfolio/images/portfolio/phone.jpg"
+        "desc":"mobileapp",
+        "imgurl":"React-Portfolio/images/portfolio/coffee.jpg"
       },
       {
         "name":"project2",
-        "description":"mobileapp",
-        "imgurl":"React-Portfolio/images/portfolio/project.jpg"
+        "desc":"mobileapp",
+        "imgurl":"React-Portfolio/images/portfolio/console.jpg"
       },
       {
         "name":"project3",
-        "description":"mobileapp",  
-        "imgurl":"React-Portfolio/images/portfolio/project2.png"
+        "desc":"mobileapp",  
+        "imgurl":"React-Portfolio/images/portfolio/farmerboy.jpg"
       },
       {
         "name":"project4",
-        "description":"mobileapp",
+        "desc":"mobileapp",
         "imgurl":"React-Portfolio/images/portfolio/phone.jpg"
       }
     ],
