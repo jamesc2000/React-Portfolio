@@ -23,11 +23,15 @@
 /* ------------------------------------------------------------------ */
 
 :root {
-   --speed: 128ms;
+   --speed: 150ms;
 }
 
 body { 
    background: #0f0f0f; 
+}
+
+html {
+   scroll-behavior: smooth;
 }
 
 /* ------------------------------------------------------------------ */
@@ -170,7 +174,10 @@ header .scrolldown a:hover { color: #F06000; }
    left: 0;
    top: 0;
 }
-.opaque { background-color: #333; }
+.opaque { 
+   background-color: #333; 
+   transition: 200ms ease-in-out;
+}
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }

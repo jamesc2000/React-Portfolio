@@ -5,19 +5,19 @@ export default class Porfolio extends Component {
     let resumeData = this.props.resumeData;
     return (
       <section id="portfolio">
-      <div className="row">
-        <div className="twelve columns collapsed">
-          <h1>Check Out Some of My Works.</h1>
-          <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-            {
-              resumeData.portfolio.map(i => (
-                <PortfolioItem key={i.name} name={i.name} desc={i.desc} src={i.imgurl}/>
-              ))
-            }
+        <div className="row">
+          <div className="twelve columns collapsed">
+            <h1>Check Out Some of My Works.</h1>
+            <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
+              {
+                resumeData.portfolio.map(i => (
+                  <PortfolioItem key={i.name} name={i.name} desc={i.desc} src={i.imgurl}/>
+                ))
+              }
+            </div>
           </div>
         </div>
-      </div>
-  </section>
-        );
+      </section>
+    );
   }
 }
