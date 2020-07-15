@@ -9,15 +9,34 @@ import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import resumeData from './resumeData';
 
+var sectionHeights = []
+var sectionPosY = []
+
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      navbarOpacity: ''
+      navbarOpacity: '',
+      currentSection: ['current', '', '', '', '']
     }
   }
 
   componentDidMount() {
+    let sections = [document.getElementById('home'), ...document.getElementsByTagName('section')]
+    console.log('Component mounted')
+    
+    let images = document.getElementsByTagName('img')     // Check if all images are done loading
+    var loadedCount = 0                                   // by adding an event listener to each image
+    for (let i=0; i < images.length; i++) {               // then increment a counter for each image loaded
+      images[i].addEventListener('load', () => {          // then compare it to the number of images in the page
+        loadedCount++
+        console.log(loadedCount + ' ' + images.length)
+        if (loadedCount === images.length-1) {
+          sectionHeights = sections.map(sections => (sections.offsetHeight))
+          sectionHeights.reduce(function (a,b,i) {return sectionPosY[i] = a + b}, 0)
+        }
+      })
+    }
     window.addEventListener('scroll', this.scrollDown)
   }
 
@@ -26,17 +45,29 @@ class App extends Component {
   }
 
   scrollDown = () => {
-    let sections = [document.getElementById('home'), ... document.getElementsByTagName('section')]
-
     let scrollTop = document.documentElement.scrollTop
-    let windowY = document.documentElement.clientHeight
-    if (scrollTop >= windowY) {
+    console.log(scrollTop)
+    if (scrollTop < sectionPosY[0]) {
       this.setState({
-        navbarOpacity: 'opaque'
+        navbarOpacity: '',
+        currentSection: ['current', '', '', '', '']
       })
-    } else {
+    } else if (sectionPosY[0] < scrollTop && scrollTop < sectionPosY[1]) {
       this.setState({
-        navbarOpacity: ''
+        navbarOpacity: 'opaque',
+        currentSection: ['', 'current', '', '', '']
+      })
+
+    } else if (sectionPosY[1] < scrollTop && scrollTop < sectionPosY[2]) {
+      this.setState({
+        navbarOpacity: 'opaque',
+        currentSection: ['', '', 'current', '', '']
+      })
+
+    } else if (sectionPosY[2] < scrollTop && scrollTop < sectionPosY[3]) {
+      this.setState({
+        navbarOpacity: 'opaque',
+        currentSection: ['', '', '', 'current', '']
       })
     }
   }
@@ -44,7 +75,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar classOpacity={this.state.navbarOpacity}/>
+        <Navbar classOpacity={this.state.navbarOpacity} selected={this.state.currentSection}/>
         <Header resumeData={resumeData}/>
         <About resumeData={resumeData}/>
         <Portfolio resumeData={resumeData}/>
