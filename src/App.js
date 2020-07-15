@@ -23,14 +23,12 @@ class App extends Component {
 
   componentDidMount() {
     let sections = [document.getElementById('home'), ...document.getElementsByTagName('section')]
-    console.log('Component mounted')
     
     let images = document.getElementsByTagName('img')     // Check if all images are done loading
     var loadedCount = 0                                   // by adding an event listener to each image
     for (let i=0; i < images.length; i++) {               // then increment a counter for each image loaded
       images[i].addEventListener('load', () => {          // then compare it to the number of images in the page
         loadedCount++
-        console.log(loadedCount + ' ' + images.length)
         if (loadedCount === images.length-1) {
           sectionHeights = sections.map(sections => (sections.offsetHeight))
           sectionHeights.reduce(function (a,b,i) {return sectionPosY[i] = a + b}, 0)
