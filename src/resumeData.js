@@ -7,7 +7,7 @@ const social = {
 let resumeData = {
     "name": "James Laurence Cruz",
     "role": "Frontend Developer",
-    "profilepic": "%PUBLIC_URL%/images/profilepic.jpg",
+    "profilepic": "images/profilepic.jpg",
     "linkedinId": "https://www.linkedin.com/in/cruz-james/",
     "roleDescription": "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
     "socialLinks":[
