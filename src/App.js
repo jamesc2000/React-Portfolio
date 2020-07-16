@@ -44,7 +44,6 @@ class App extends Component {
 
   scrollDown = () => {
     let scrollTop = document.documentElement.scrollTop
-    console.log(scrollTop)
     if (scrollTop < sectionPosY[0]) {
       this.setState({
         navbarOpacity: '',
