@@ -128,7 +128,7 @@ table {
 
 /*  1. Basic  ------------------------------------------------------- */
 :root {
-   --speed: 120ms;
+   --speed: 150ms;
 }
 
 *,
@@ -466,13 +466,13 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-   font: 16px/30px 'opensans-bold', sans-serif;
+   font: 16px/35px 'opensans-bold', sans-serif;
    background: #F06000;
    display: inline-block;
 	text-decoration: none;
    letter-spacing: 0;
    color: #fff;
-	padding: 12px 20px;
+	padding: 12px 24px;
 	margin-bottom: 18px;
    border: none;
    cursor: pointer;
@@ -487,7 +487,7 @@ input[type="button"] {
    -moz-border-radius: 3px;
    -webkit-border-radius: 3px;
    -khtml-border-radius: 3px;
-   border-radius: 3px;
+   border-radius: 0;
 }
 
 .button:hover,
@@ -622,10 +622,12 @@ input[type="checkbox"] { display: inline; }
    padding: 0 20px;
    min-height: 1px;
    float: left;
+   margin-bottom: 30px;
 }
 .column.centered, .columns.centered  {
     float: none;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 /* removed gutters */
@@ -717,6 +719,11 @@ properly.
    .first { clear: none; }
    .s-first { clear: left; }
 
+   /* ----- */
+   .s-bgrid-halves {
+      display: flex;
+      align-items: center;
+   }
 }
 
 /* mobile wide/smaller tablets

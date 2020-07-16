@@ -23,11 +23,15 @@
 /* ------------------------------------------------------------------ */
 
 :root {
-   --speed: 128ms;
+   --speed: 150ms;
 }
 
 body { 
    background: #0f0f0f; 
+}
+
+html {
+   scroll-behavior: smooth;
 }
 
 /* ------------------------------------------------------------------ */
@@ -36,7 +40,7 @@ body {
 
 header {
    position: relative;
-   height: 800px;
+   height: 100vh;
    min-height: 500px;
    width: 100%;
    text-align: center;
@@ -170,7 +174,10 @@ header .scrolldown a:hover { color: #F06000; }
    left: 0;
    top: 0;
 }
-.opaque { background-color: #333; }
+.opaque { 
+   background-color: #333; 
+   transition: 200ms ease-in-out;
+}
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
@@ -527,6 +534,11 @@ ul#nav li.current a, ul#nav li:hover a { color: #F06000; }
    font: 12px/18px 'opensans-light', sans-serif;
    color: #c6c7c7;
    margin-bottom: 0;
+}
+
+#buttons
+{
+   margin-top: 8px;
 }
 
 /* on hover */
