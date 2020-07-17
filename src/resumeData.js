@@ -7,7 +7,7 @@ const social = {
 let resumeData = {
     "name": "James Laurence Cruz",
     "role": "Frontend Developer",
-    "profilepic": "images/profilepic.jpg",
+    "profilepic": `${process.env.PUBLIC_URL}/images/profilepic.jpg`,
     "linkedinId": "https://www.linkedin.com/in/cruz-james/",
     "roleDescription": "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
     "socialLinks":[
@@ -66,22 +66,22 @@ let resumeData = {
       {
         "name":"project1",
         "desc":"mobileapp",
-        "imgurl":"%PUBLIC_URL%/images/portfolio/coffee.jpg"
+        "imgurl":`${process.env.PUBLIC_URL}/images/portfolio/coffee.jpg`
       },
       {
         "name":"project2",
         "desc":"mobileapp",
-        "imgurl":"%PUBLIC_URL%/images/portfolio/console.jpg"
+        "imgurl":`${process.env.PUBLIC_URL}/images/portfolio/console.jpg`
       },
       {
         "name":"project3",
         "desc":"mobileapp",  
-        "imgurl":"%PUBLIC_URL%/images/portfolio/farmerboy.jpg"
+        "imgurl":`${process.env.PUBLIC_URL}/images/portfolio/farmerboy.jpg`
       },
       {
         "name":"project4",
         "desc":"mobileapp",
-        "imgurl":"%PUBLIC_URL%/images/portfolio/phone.jpg"
+        "imgurl":`${process.env.PUBLIC_URL}/images/portfolio/phone.jpg`
       }
     ],
   }
