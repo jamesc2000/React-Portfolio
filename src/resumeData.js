@@ -70,10 +70,11 @@ let resumeData = {
             stack: "",
             desc:
                 "A simple multiplayer rock paper scissors game built with plain html and css for the frontend, and express.js and WebSockets for the backend.",
-            imgurl: `${process.env.PUBLIC_URL}/images/portfolio/coffee.jpg`,
+            imgurl: `${process.env.PUBLIC_URL}/images/portfolio/rockpaperscissors.png`,
             code: "https://github.com/jamesc2000/rockpaperscissors",
             demo: "http://rockpaperscissors-server-app.herokuapp.com/"
-        },
+        }
+    ]
 };
 
 export default resumeData;
