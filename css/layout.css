@@ -179,7 +179,7 @@ header .scrolldown a:hover { color: #F06000; }
    transition: 200ms ease-in-out;
 }
 
-/* hide toggle button */
+/* hide toggle  */
 #nav-wrap > a.mobile-btn { display: none; }
 
 ul#nav {
