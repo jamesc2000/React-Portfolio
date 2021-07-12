@@ -13,8 +13,8 @@ export default class PorfolioItem extends Component {
                             {this.props.desc}
                         </div>
                         <div id="buttons" className="bgrid-halves s-bgrid-halves cf">
-                            <button id="demo" className="button column centered">Demo Project</button>
-                            <button id="view" className="button column centered">View Code</button>
+                            <a href={`${this.props.demo}`}><button id="demo" className="button column centered">Demo Project</button></a>
+                            <a href={`${this.props.source}`}><button id="view" className="button column centered">View Code</button></a>
                         </div>
                     </div>
                 </div>

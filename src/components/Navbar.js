@@ -10,7 +10,6 @@ export default class Navbar extends Component {
                     <li className={this.props.selected[1]}><a className="smoothscroll" href="#about">About</a></li>
                     <li className={this.props.selected[2]}><a className="smoothscroll" href="#portfolio">Works</a></li>
                     <li className={this.props.selected[3]}><a className="smoothscroll" href="#resume">Resume</a></li>
-                    <li className={this.props.selected[4]}><a className="smoothscroll" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         );

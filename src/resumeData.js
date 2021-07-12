@@ -1,7 +1,7 @@
 const social = {
     "linkedin": "https://www.linkedin.com/in/cruz-james/",
     "github": "https://github.com/jamesc2000",
-    "website": ""
+    "website": "https://jamesc2000.github.io/React-Portfolio/"
 }
 
 let resumeData = {
@@ -64,24 +64,18 @@ let resumeData = {
     ],
     "portfolio":[
       {
-        "name":"project1",
-        "desc":"mobileapp",
-        "imgurl":`${process.env.PUBLIC_URL}/images/portfolio/coffee.jpg`
+        "name":"Rock Paper Scissors",
+        "desc":"A simple rock paper scissors app built with plain bootstrap for the frontend and express.js and WebSockets for the backend",
+        "imgurl":`${process.env.PUBLIC_URL}/images/portfolio/rockpaperscissors.png`,
+        "demo": "http://rockpaperscissors-server-app.herokuapp.com/",
+        "source": "https://github.com/jamesc2000/rockpaperscissors"
       },
       {
-        "name":"project2",
-        "desc":"mobileapp",
-        "imgurl":`${process.env.PUBLIC_URL}/images/portfolio/console.jpg`
-      },
-      {
-        "name":"project3",
-        "desc":"mobileapp",  
-        "imgurl":`${process.env.PUBLIC_URL}/images/portfolio/farmerboy.jpg`
-      },
-      {
-        "name":"project4",
-        "desc":"mobileapp",
-        "imgurl":`${process.env.PUBLIC_URL}/images/portfolio/phone.jpg`
+        "name":"csnotehub.com",
+        "desc":"A tutorial website for those interested in programming. Built with React and Gatsby, responsive, and fast.",
+        "imgurl": `${process.env.PUBLIC_URL}/images/portfolio/csnotehub.png`,
+        "demo": "https://csnotehub.com",
+        "source": "https://github.com/jamesc2000/csnotehub"
       }
     ],
   }
