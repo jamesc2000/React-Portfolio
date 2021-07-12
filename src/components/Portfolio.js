@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PortfolioItem from './PortfolioItem';
+import React, { Component } from "react";
+import PortfolioItem from "./PortfolioItem";
 export default class Porfolio extends Component {
   render() {
     let resumeData = this.props.resumeData;
